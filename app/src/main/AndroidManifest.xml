@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.custom">
-
+        <activity android:name=".reproductor"></activity>
+        <activity
+            android:name=".peliculas.datospeliculas"
+            android:theme="@style/Theme.custom"></activity>
         <activity
             android:name=".tabs"
-            android:label="@string/title_activity_tabs"></activity>
+            android:label="@string/title_activity_tabs" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

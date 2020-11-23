@@ -26,6 +26,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item  name="android:windowSharedElementEnterTransition">@transition/grid_transition</item>
+        <item  name="android:windowSharedElementExitTransition">@transition/grid_transition</item>
+    </style>
+
+    <style name="Theme.AnimationViewsIntent.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AnimationViewsIntent.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.Apprepasoexamen.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
 
 </resources>

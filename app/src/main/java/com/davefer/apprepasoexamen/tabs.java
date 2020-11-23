@@ -24,7 +24,6 @@ import androidx.navigation.ui.NavigationUI;
 public class tabs extends AppCompatActivity {
 
     private Drawer mDrawer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +47,15 @@ public class tabs extends AppCompatActivity {
                 .withActionBarDrawerToggle(true) //Muestra o no el icono de hamburguesa
                 .withToolbar(toolbar) //Lo asocia a nuestra toolbar
                 .withActionBarDrawerToggleAnimated(true)
-                .withDrawerGravity(Gravity.END) //Lo pone a la derecha (La hamburguesa sigue a la izquierda)
+                .withDrawerGravity(Gravity.START) //Lo pone a la derecha (La hamburguesa sigue a la izquierda)
                 .withAccountHeader(headerResult)
                 .withSelectedItem(2)
                 .withSliderBackgroundColor(getResources().getColor(R.color.accent)) //Color de fondo
                 .addDrawerItems(
                         new PrimaryDrawerItem()
                                 .withIdentifier(1)
-                                .withName("Opción 1")
-                                .withIcon(android.R.drawable.btn_star_big_on),
+                                .withName("Opción 1"),
+                               // .withIcon(android.R.drawable.btn_star_big_on),
                         new PrimaryDrawerItem()
                                 .withIdentifier(2)
                                 .withName("Opción 2"),
@@ -101,7 +100,7 @@ public class tabs extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_test)
                 .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -122,5 +121,4 @@ public class tabs extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }
