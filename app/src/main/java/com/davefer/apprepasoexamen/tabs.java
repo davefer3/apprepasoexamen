@@ -1,5 +1,6 @@
 package com.davefer.apprepasoexamen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -54,7 +55,7 @@ public class tabs extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem()
                                 .withIdentifier(1)
-                                .withName("Opción 1"),
+                                .withName("Reproductor"),
                                // .withIcon(android.R.drawable.btn_star_big_on),
                         new PrimaryDrawerItem()
                                 .withIdentifier(2)
@@ -74,7 +75,8 @@ public class tabs extends AppCompatActivity {
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 switch ((int)drawerItem.getIdentifier()) {
                                     case 1: {
-                                        Toast.makeText(tabs.this, "Opción 1 pulsada", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(),reproductor.class);
+                                        startActivity(intent);
                                         break;
                                     }
                                     case 2: {
